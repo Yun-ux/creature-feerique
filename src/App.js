@@ -10,6 +10,7 @@ const routes = {
   '/home': () => <HomePage />,
   '/creature': () => <CreaturePage />,
   '/mentions-legal': () => <MentionPage />,
+  '/404': () => <NotFoundPage />,
 };
 
 const App = () => {
@@ -17,12 +18,12 @@ const App = () => {
 
     return (
     <div>
-      <A href="home">Home Page</A>
+      <A href="home">Home</A>
       <A href="creature">Creature</A>
       <A href="mentions-legal">Mention Legal</A>
-      {useRoutes}
+      {match|| <NotFoundPage />}
     </div>  
-    //match || <NotFoundPage />
+    
 
   );}
 
